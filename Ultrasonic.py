@@ -9,8 +9,8 @@ ECHO = 3
 GPIO.setup(TRIG ,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
 
+#초음파 출력 초기화
 GPIO.output(TRIG, False)
-print("Starting.....")
 time.sleep(2)
 
 relay = 23
