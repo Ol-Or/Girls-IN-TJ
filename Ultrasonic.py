@@ -10,7 +10,6 @@ GPIO.setup(TRIG ,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
 
 GPIO.output(TRIG, False)
-print("Starting.....")
 time.sleep(2)
 
 relay = 23
