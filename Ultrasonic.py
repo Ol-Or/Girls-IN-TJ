@@ -44,8 +44,8 @@ try:
             GPIO.output(relay, GPIO.HIGH)
         else:
             GPIO.output(relay, GPIO.LOW)  
-            
-        time.sleep(0.4)      
+
+     
 
 except KeyboardInterrupt:
     GPIO.cleanup()
