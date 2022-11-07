@@ -23,7 +23,6 @@ try:
     while True:
         pulse_start = 0
         pulse_stop = 0
-
         GPIO.output(TRIG, True)
         time.sleep(0.00001)
         GPIO.output(TRIG, False)
