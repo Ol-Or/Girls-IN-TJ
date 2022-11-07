@@ -42,7 +42,7 @@ try:
         time.sleep(1)
 
         # 워터펌프 작동
-        if distance > 10:  # 10은 임의의 값으로 잡았음
+        if distance < 5.5:  # 10은 임의의 값으로 잡았음
             GPIO.output(relay, GPIO.HIGH)
         else:
             GPIO.output(relay, GPIO.LOW)
