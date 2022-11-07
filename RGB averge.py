@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-src = cv2.imread('1.jpg')
+src = cv2.imread('image.jpg')
 
 if src is None:
     print('Image load failed!')
