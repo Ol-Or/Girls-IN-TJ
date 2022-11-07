@@ -21,6 +21,9 @@ GPIO.output(relay, GPIO.LOW)
 try:
     # 펄스 발생 딜레이
     while True:
+        pulse_start = 0
+        pulse_stop = 0
+
         GPIO.output(TRIG, True)
         time.sleep(0.00001)
         GPIO.output(TRIG, False)
@@ -34,7 +37,6 @@ try:
             pulse_stop = time.time()
 
         pulse_time = pulse_stop - pulse_start
-
         # 물까지의 거리계산
         distance = pulse_time * 17150
 
