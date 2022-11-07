@@ -1,3 +1,17 @@
+#사진 30초마다 촬영 후 저장
+from picamera import PiCamera
+from time import sleep
+
+camera = PiCamera()
+
+camera.start_preview()
+for i in range(30):
+   sleep(30)
+   camera.capture('/home/pi/image%s.jpg' % i)
+camera.stop_preview()
+
+
+#저장한 jpg 파일 읽고 평균값 추출
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
