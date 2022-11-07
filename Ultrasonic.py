@@ -46,6 +46,5 @@ try:
         else:
             GPIO.output(relay, GPIO.LOW)
 
-
 except KeyboardInterrupt:
     GPIO.cleanup()
