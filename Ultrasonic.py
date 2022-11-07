@@ -29,11 +29,11 @@ try:
 
         # ECHO 상승 시간값 저장
         while GPIO.input(ECHO) == 0:
-            pulse_start = time.time()
+          pulse_start = time.time()
 
         # ECHO 하강 시간값 저장
         while GPIO.input(ECHO) == 1:
-            pulse_stop = time.time()
+          pulse_stop = time.time()
 
         pulse_time = pulse_stop - pulse_start
         # 물까지의 거리계산
