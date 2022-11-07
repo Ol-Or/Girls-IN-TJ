@@ -6,11 +6,9 @@ GPIO.setmode(GPIO.BCM)
 
 TRIG = 18
 ECHO = 21
-i = 0
 
 GPIO.setup(TRIG, GPIO.OUT)
 GPIO.setup(ECHO, GPIO.IN)
-GPIO.setup(4, GPIO.OUT)
 
 GPIO.output(TRIG, False)
 print("Starting.....")
@@ -22,10 +20,10 @@ while True:
     GPIO.output(TRIG, False)
 
     while GPIO.input(ECHO) == 0:
-        pulse_start = time.time()
+      pulse_start = time.time()
 
     while GPIO.input(ECHO) == 1:
-        pulse_stop = time.time()
+      pulse_stop = time.time()
 
     pulse_time = pulse_stop - pulse_start
 
@@ -36,13 +34,6 @@ while True:
 
     if distance < 4:
         print("Water will overflow")
-        GPIO.output(4, True)
-        time.sleep(0.5)
-        GPIO.output(4, False)
-        time.sleep(0.5)
-        GPIO.output(4, True)
-        time.sleep(0.5)
-        GPIO.output(4, False)
-        time.sleep(0.5)
+    
     else:
         GPIO.output(4, False)
