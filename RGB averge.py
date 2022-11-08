@@ -7,7 +7,7 @@ camera = PiCamera()
 camera.start_preview()
 for i in range(30):
    sleep(30)
-   camera.capture('/home/pi/image%s.jpg' % i)
+   camera.capture('/home/pi/image.jpg' % i)
 camera.stop_preview()
 
 
