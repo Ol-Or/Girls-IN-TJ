@@ -60,7 +60,7 @@ cv2.imshow('src', src)
 cv2.waitKey(1)
 
 #pumpon
-relay1 = 4  #핀 바꾸자
+relay2 = 13 
 GPIO.setup(relay, GPIO.OUT)
 GPIO.output(relay, GPIO.LOW)
 
