@@ -42,7 +42,7 @@ try:
         time.sleep(1)
 
         # Waterpump on
-        if distance > 8: 
+        if distance > 6: 
             GPIO.output(A1A, GPIO.HIGH)
         else:
             GPIO.output(A1A, GPIO.LOW)
