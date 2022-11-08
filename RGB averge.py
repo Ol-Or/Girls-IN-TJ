@@ -1,6 +1,8 @@
 #사진 5초마다 촬영 후 저장
 from picamera import PiCamera
 from time import sleep
+import RPi.GPIO as GPIO
+import time
 
 camera = PiCamera()
 
@@ -57,8 +59,20 @@ print("B : ", B_avg)
 cv2.imshow('src', src)
 cv2.waitKey(1)
 
+#pumpon
+relay1 = 4  #핀 바꾸자
+GPIO.setup(relay, GPIO.OUT)
+GPIO.output(relay, GPIO.LOW)
 
-
+try:
+   while True:
+      if R_avg: #값을 넣자아아아아아아아아*/
+         GPIO.output(relay2, GPIO.HIGH)
+      else:
+         GPIO.output(relay2, GPIO.LOW)
+      
+except KeyboardInterrupt:
+    GPIO.cleanup()
 
 
 
