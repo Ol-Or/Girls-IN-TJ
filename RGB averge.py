@@ -13,7 +13,7 @@ import cv2
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
-src = cv2.imread('image.jpg')
+src = cv2.imread('/home/pi/image.jpg'.format(i)')
 
 if src is None:
     print('Image load failed!')
