@@ -69,7 +69,7 @@ GPIO.output(relay2, GPIO.LOW)
 
 try:
    while True:
-      if R_avg > 130:
+      if R_avg > 100:
          GPIO.output(relay2, GPIO.HIGH)
       else:
          GPIO.output(relay2, GPIO.LOW)
