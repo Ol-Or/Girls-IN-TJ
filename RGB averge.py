@@ -61,8 +61,8 @@ cv2.waitKey(1)
 
 #pumpon
 relay2 = 13 
-GPIO.setup(relay, GPIO.OUT)
-GPIO.output(relay, GPIO.LOW)
+GPIO.setup(relay2, GPIO.OUT)
+GPIO.output(relay2, GPIO.LOW)
 
 try:
    while True:
