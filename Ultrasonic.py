@@ -14,9 +14,9 @@ GPIO.setup(ECHO, GPIO.IN)
 GPIO.output(TRIG, False)
 time.sleep(2)
 
-relay1 = 4
-GPIO.setup(relay, GPIO.OUT)
-GPIO.output(relay, GPIO.LOW)
+A1A = 4
+GPIO.setup(A1A, GPIO.OUT)
+GPIO.output(A1A, GPIO.LOW)
 
 try:
     # 펄스 발생 딜레이
@@ -43,9 +43,9 @@ try:
 
         # 워터펌프 작동
         if distance > 8: 
-            GPIO.output(relay1, GPIO.HIGH)
+            GPIO.output(A1A, GPIO.HIGH)
         else:
-            GPIO.output(relay1, GPIO.LOW)
+            GPIO.output(A1A, GPIO.LOW)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
