@@ -4,11 +4,9 @@ from time import sleep
 
 camera = PiCamera()
 
-camera.start_preview()
-for i in range(30):
+for i in range(5):
    sleep(30)
    camera.capture('/home/pi/image.jpg' % i)
-camera.stop_preview()
 
 
 #저장한 jpg 파일 읽고 평균값 추출
