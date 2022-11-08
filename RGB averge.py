@@ -1,11 +1,11 @@
-#사진 30초마다 촬영 후 저장
+#사진 5초마다 촬영 후 저장
 from picamera import PiCamera
 from time import sleep
 
 camera = PiCamera()
 
 for i in range(5):
-   sleep(30)
+   sleep(5)
    camera.capture('/home/pi/image.jpg' % i)
 
 
