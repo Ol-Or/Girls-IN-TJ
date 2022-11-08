@@ -24,7 +24,6 @@ bgr_planes = cv2.split(src)
 
 for (p, c) in zip(bgr_planes, colors):
     hist = cv2.calcHist([p], [0], None, [256], [0, 256])   
-    plt.plot(hist, color=c)
 
 Red = []
 Green = []
@@ -58,7 +57,7 @@ print("B : ", B_avg)
 cv2.imshow('src', src)
 cv2.waitKey(1)
 
-plt.show()
+
 
 
 
