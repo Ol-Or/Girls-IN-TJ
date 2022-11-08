@@ -71,7 +71,7 @@ try:
    while True:
       if R_avg > 130:
          GPIO.output(relay2, GPIO.HIGH)
-      elif:
+      elif <= 130:
          GPIO.output(relay2, GPIO.LOW)
       
 except KeyboardInterrupt:
