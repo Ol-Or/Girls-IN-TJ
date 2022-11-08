@@ -3,6 +3,10 @@ from picamera import PiCamera
 from time import sleep
 import RPi.GPIO as GPIO
 import time
+import cv2
+import sys
+import numpy as np
+import matplotlib.pyplot as plt
 
 camera = PiCamera()
 
@@ -11,10 +15,6 @@ for i in range(5):
    camera.capture('/home/pi/image.jpg'.format(i))
 
 #저장한 jpg 파일 읽고 평균값 추출
-import cv2
-import sys
-import numpy as np
-import matplotlib.pyplot as plt
 src = cv2.imread('/home/pi/image.jpg'.format(i))
 
 if src is None:
