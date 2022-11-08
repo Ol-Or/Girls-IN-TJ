@@ -72,7 +72,7 @@ try:
       if R_avg > 130:
          GPIO.output(relay2, GPIO.HIGH)
       elif:
-         GPIO.output(relay2, GPIO.OUT)
+         GPIO.output(relay2, GPIO.LOW)
       
 except KeyboardInterrupt:
     GPIO.cleanup()
