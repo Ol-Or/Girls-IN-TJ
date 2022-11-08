@@ -7,13 +7,14 @@ import cv2
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 camera = PiCamera()
 
-for i in range(5):
+for i in range(100):
    sleep(5)
    camera.capture('/home/pi/image.jpg'.format(i))
 
@@ -67,10 +68,17 @@ relay = 13
 GPIO.setup(relay, GPIO.OUT)
 GPIO.output(relay, GPIO.LOW)
 
+start=time.time()
+end=time.time()
+duration = start - end
+
 try:
    while True:
       if R_avg > 100:
          GPIO.output(relay, GPIO.HIGH)
+         if duration == 5:
+            sys.exit()
+         
       else:
          GPIO.output(relay, GPIO.LOW)
       
