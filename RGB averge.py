@@ -62,7 +62,7 @@ print("B : ", B_avg)
 cv2.imshow('src', src)
 cv2.waitKey(1)
 
-#pumpon
+#Water pump 
 relay = 13 
 GPIO.setup(relay, GPIO.OUT)
 GPIO.output(relay, GPIO.LOW)
