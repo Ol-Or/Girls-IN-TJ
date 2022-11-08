@@ -29,7 +29,7 @@ GPIO.output(A1A, GPIO.LOW)
 # Camera
 camera = PiCamera()
 
-for i in range(100):
+for i in range(5):
     sleep(5)
     camera.capture('/home/pi/image.jpg'.format(i))
 
