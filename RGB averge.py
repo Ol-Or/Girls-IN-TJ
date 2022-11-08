@@ -63,16 +63,16 @@ cv2.imshow('src', src)
 cv2.waitKey(1)
 
 #pumpon
-relay2 = 13 
-GPIO.setup(relay2, GPIO.OUT)
-GPIO.output(relay2, GPIO.LOW)
+relay = 13 
+GPIO.setup(relay, GPIO.OUT)
+GPIO.output(relay, GPIO.LOW)
 
 try:
    while True:
       if R_avg > 100:
-         GPIO.output(relay2, GPIO.HIGH)
+         GPIO.output(relay, GPIO.HIGH)
       else:
-         GPIO.output(relay2, GPIO.LOW)
+         GPIO.output(relay, GPIO.LOW)
       
 except KeyboardInterrupt:
     GPIO.cleanup()
