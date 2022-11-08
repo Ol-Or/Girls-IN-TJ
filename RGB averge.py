@@ -6,7 +6,7 @@ camera = PiCamera()
 
 for i in range(5):
    sleep(5)
-   camera.capture('/home/pi/image.jpg' % i)
+   camera.capture('/home/pi/image%.jpg' % i)
 
 
 #저장한 jpg 파일 읽고 평균값 추출
