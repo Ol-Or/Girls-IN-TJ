@@ -8,6 +8,9 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
 camera = PiCamera()
 
 for i in range(5):
