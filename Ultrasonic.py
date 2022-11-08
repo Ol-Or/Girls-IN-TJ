@@ -14,7 +14,7 @@ GPIO.setup(ECHO, GPIO.IN)
 GPIO.output(TRIG, False)
 time.sleep(2)
 
-relay = 4
+relay1 = 4
 GPIO.setup(relay, GPIO.OUT)
 GPIO.output(relay, GPIO.LOW)
 
@@ -43,9 +43,9 @@ try:
 
         # 워터펌프 작동
         if distance > 8: 
-            GPIO.output(relay, GPIO.HIGH)
+            GPIO.output(relay1, GPIO.HIGH)
         else:
-            GPIO.output(relay, GPIO.LOW)
+            GPIO.output(relay1, GPIO.LOW)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
