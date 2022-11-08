@@ -10,6 +10,7 @@ for i in range(5):
 
 #저장한 jpg 파일 읽고 평균값 추출
 import cv2
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 src = cv2.imread('image.jpg')
